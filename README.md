@@ -90,10 +90,13 @@ By default, the stack exposes the following ports:
 `localhost`.
 
 Now that the stack is running, you will want to inject some log entries. The shipped Logstash configuration allows you
-to send content via TCP:
+to send log4net logs via UDP:
+
 
 ```console
-$ nc localhost 5000 < /path/to/logfile.log
+# Build ./logging-tester/LoggingTester.sln
+# run
+$ ./logging-tester/bin/Debug/LoggingTester.exe
 ```
 
 ## Initial setup
